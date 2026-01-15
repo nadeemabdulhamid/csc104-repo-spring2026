@@ -1,5 +1,5 @@
 % Class 1 Exercises
-function [Ex_3a, Ex_4b, Ex_5a, Ex_5b, Fix_1] = class_01()
+function [Ex_3a, Ex_4b, Ex_5a, Ex_5b, Fix_1, Fix_2] = class_01()
 % Replace the 0s (zeros) below with expressions to
 % calculate the value of the indicated exercise from
 % the textbook, section 1.10.
