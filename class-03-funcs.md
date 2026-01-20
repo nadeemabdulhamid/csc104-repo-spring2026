@@ -2,6 +2,10 @@
 
 Write separate function files for each of the following. In a `class_03.m` script, write tests to ensure that the functions work as intended.
 
+### Number of Digits 
+
+(revisited) as a function...
+- with tests
 
 ### Fibonacci Numbers
 
