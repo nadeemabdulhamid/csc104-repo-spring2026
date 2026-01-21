@@ -28,6 +28,17 @@ Inputs:
 Outputs:
 1. _(double)_ The specified Fibonacci number
 
+Here are some tests:
+
+```
+assert(fib(1), 1);
+assert(fib(2), 1);
+assert(fib(3), 2);
+assert(fib(20), 6765);     % will need to fix this
+assert(fib(99), 218922995834555169026, 1e6);  % only ~15 digit precision
+```
+
+
 
 ### Pizza Party
 You decide to host a party and buy some pizzas for you and your friends. But, in order to be fair, every person should get the same number of slices of pizza. Any extra slices will be left
@@ -46,6 +57,25 @@ Inputs:
 Outputs:
 1. _(double)_ Slices of pizza per person
 2. _(double)_ Slices of pizza left over
+
+For functions with multiple outputs, the standard practice for testing with `assert` is:
+- Call the function and capture the multiple return values
+- Assert each value separately
+
+```
+[s1,s2] = pizzaParty(5, 2);
+assert(s1, 3);
+assert(s2, 1);
+
+[s1,s2] = pizzaParty(4, 2);
+assert(s1, 4);
+assert(s2, 0);
+
+[s1,s2] = pizzaParty(12, 2);
+assert(s1, 1);
+assert(s2, 4);
+```
+
 
 
 ### Temperature Conversion (Optional Arguments)
