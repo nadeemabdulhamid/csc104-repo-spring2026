@@ -153,7 +153,7 @@ Define variables for each intermediate stage as you compute an answer.
 
 > (Hint: Use MATLAB built-in functions `fix` and `ceil`.)
 
-Also compute the answer for **1005** people.
+Also compute the answer for **1005** people. (Keep the computations for both numbers of people - 777 and 1005 - in your file at the same time, even if it means you have to copy/paste a bunch of stuff.)
 
 
 
