@@ -34,8 +34,8 @@ Here are some tests:
 assert(fib(1), 1);
 assert(fib(2), 1);
 assert(fib(3), 2);
-assert(fib(20), 6765);     % will need to fix this
-assert(fib(99), 218922995834555169026, 1e6);  % only ~15 digit precision
+assert(fib(20), 6765);     % may need to fix this
+assert(fib(99), 218922995834555169026);  % only ~15 digit precision
 ```
 
 
