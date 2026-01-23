@@ -161,7 +161,19 @@ Sa =
 ```
 
 
-### Coaster Set Pricing
+### Fibonacci (Recursive version)
+
+Define a second function that implements the _recursive_ definition of the Fibonacci number sequence. A function that calls itself is called **recursive**. Name your function `fibRec`.
+
+$`F_1=1, \qquad F_2=1, \qquad F_{n+2}=F_{n}+F_{n+1}`$
+
+Try it out for small values of _n_ (it will not work for large ones). (The resulting sequence is 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ... .)
+
+
+
+
+
+### [Challenge - OPTIONAL Exercise] Coaster Set Pricing
 
 You setting up a sale front for custom laser‑engraved wooden coaster sets on Etsy. Buyers can select:
 
@@ -212,13 +224,4 @@ assert( s, 2 );   % (2 + 3) / 2
 assert( p, 31.5, 0.01 );
 assert( s, 3 );
 ```
-
-
-### Fibonacci (Recursive version)
-
-Define a second function that implements the _recursive_ definition of the Fibonacci number sequence. A function that calls itself is called **recursive**. Name your function `fibRec`.
-
-$`F_1=1, \qquad F_2=1, \qquad F_{n+2}=F_{n}+F_{n+1}`$
-
-Try it out for small values of _n_ (it will not work for large ones). (The resulting sequence is 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ... .)
 
