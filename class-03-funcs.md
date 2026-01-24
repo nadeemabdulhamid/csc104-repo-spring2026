@@ -110,9 +110,9 @@ Here are some tests for your script file:
 ```matlab
 assert(tempConvert(25), 77, .0001);
 assert(tempConvert(77,'F2C'), 25, .0001);
-assert(tempConvert(21.37,'c2f', 2), 70.47, .01);
-assert(tempConvert(74,'F2C',1), 23.3, .1);
-assert(tempConvert(75.5148,'F2C', 4), 24.1749, .0001);
+assert(tempConvert(21.37,'c2f', 2), 70.47, .001);
+assert(tempConvert(74,'F2C',1), 23.3, .01);
+assert(tempConvert(75.5148,'F2C', 4), 24.1749, .00001);
 ```
 
 
