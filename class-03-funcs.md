@@ -133,8 +133,11 @@ You only have to deal with 8-digit positive integers.
 Here are some tests:
 
 ```matlab
-assert( extractDate( 19480105 ), [ 1948,  1,  5 ] );
-assert( extractDate( 20251226 ), [ 2025, 12, 26 ] );
+[y, m, d] = extractDate( 19480105 );
+assert( [y, m, d], [ 1948,  1,  5 ] );
+
+[y, m, d] = extractDate( 20251226 );
+assert( [y, m, d], [ 2025, 12, 26 ] );
 ```
 
 
