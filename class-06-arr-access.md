@@ -35,8 +35,7 @@ You should get a figure window pop up with a graphical heat map of the data.
 
 ### Single Element Addressing (Indexing)
 
-<details>
-<summary>The image map should reflect three hotspots (cells that are brighter in color than all their surrounding). Use single element indexes to extract the values of those three individual cells.</summary>
+<details><summary>The image map should reflect three hotspots (cells that are brighter in color than all their surrounding). Use single element indexes to extract the values of those three individual cells.</summary>
 
 ```
 temps( 3, 9 )
@@ -78,23 +77,69 @@ temps( 10, 12 )
 
 ### Boundary and Pattern Indexing
 
-- Extract all boundary sensors (first/last row, first/last column) as one long vector in a single expression, without listing each side separately. 
+<details><summary>Extract all boundary sensors (first/last row, first/last column) as one long vector in a single expression, without listing each side separately.
+</summary>
 
-- Set the values of all boundary cells to `nan`. 
+```
+boundaries = [ temps(1,:) temps(end,:) temps(2:end-1,1)' temps(2:end-1,end)' ]
+% the 2:end-1  so that the corners are not duplicated
+```
+</details>
 
-    Redraw the image map of `temps` after doing this.
+<p>
 
-- Create a checkerboard sample of the field by extracting all elements whose row and column indices are both odd.
+<details><summary>
+Set the values of all boundary cells to `nan`. 
+
+Redraw the image map of `temps` after doing this.
+</summary>
+
+```
+temps( [1,end], : ) = nan;
+temps( : , [1,end]) = nan;
+```
+</details>
+
+<details><summary>
+Create a checkerboard sample of the field by extracting all elements whose row and column indices are both odd.
+
 (e.g., `(1,1)`, `(1,3)`, `(3,1)`, ...)
+</summary>
+
+```
+sample = temps(1:2:end, 1:2:end)
+```
+
+This is like: `temps( [1, 3, 5, 7, ..., end] , [1, 3, 5, 7, ..., end])`.
+</details>
 
 
 ### Linear Indexing
 
-- MATLAB stores matrices [column‑major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
+MATLAB stores matrices in [column‑major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
+
+<details><summary>
+Use linear indexing to extract the 1st, 25th, and 80th elements of temps.
     
-    Use linear indexing to extract the 1st, 25th, and 80th elements of temps.
-    
-    Then determine their corresponding (row, column) positions. (Look up `ind2sub`.) Verify that the element values are the same as when accessed through linear indexing.
+Then determine their corresponding (row, column) positions. (Look up `ind2sub`.) Verify that the element values are the same as when accessed through linear indexing.
+
+</summary>
+
+```
+temps(1)
+temps(25)
+temps(80)
+
+[r, c] = ind2sub( size(temps), 1 )
+[r, c] = ind2sub( size(temps), 25 )
+[r, c] = ind2sub( size(temps), 80 )
+
+assert( temps(1), temps(1, 1) );
+assert( temps(25), temps(5, 3) );
+assert( temps(80), temps(10, 8) );
+```
+
+</details>
 
 
 
