@@ -84,6 +84,16 @@ temps(5, : )
 
 ### Submatrices and Spatial Regions
 
+<details><summary>The field has a new irrigation line along rows 5-6. Extract just those two rows.
+</summary>
+
+```
+temps( 5:6, : )
+```
+</details>
+
+<p>
+
 <details><summary>Extract the 4×4 block in the northwest corner of the field.
 </summary>
 
@@ -102,15 +112,7 @@ temps( 5:8, 4:7 )
 ```
 </details>
 
-<p>
 
-<details><summary>The field has a new irrigation line along rows 5-6. Extract just those two rows.
-</summary>
-
-```
-temps( 5:6, : )
-```
-</details>
 
 
 ### Logical Indexing (Thresholds & Masks)
