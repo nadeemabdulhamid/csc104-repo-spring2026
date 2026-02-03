@@ -48,32 +48,110 @@ temps( 10, 12 )
 
 ### Foundational Row/Column Indexing
 
-- Extract the entire northern edge of the field (the first row of sensors).
+<details><summary>Extract the entire northern edge of the field (the first row of sensors).
 
-- Extract the sensor readings along the east side of the field (last column).
+</summary>
 
-- Extract the temperatures from the central west–east transect, i.e., row 5.
+```
+% Any of these:
+temps( 1 ,  : )
+temps( 1 , 1:12 )
+temps( 1 , 1:end )
+```
+</details>
+
+<p>
+
+<details><summary>Extract the sensor readings along the east side of the field (last column).
+
+</summary>
+
+```
+temps( : , end )
+```
+</details>
+
+<p>
+
+<details><summary>Extract the temperatures from the central west–east transect, i.e., row 5.
+</summary>
+
+```
+temps(5, : )
+```
+</details>
 
 
 ### Submatrices and Spatial Regions
 
-- Extract the 4×4 block in the northwest corner of the field.
+<details><summary>Extract the 4×4 block in the northwest corner of the field.
+</summary>
 
-- Extract all sensors from rows 5 through 8 and columns 4 through 7. This region is being shaded by a nearby structure.
+```
+temps( 1:4, 1:4 )
+```
+</details>
 
-- The field has a new irrigation line along rows 5-6. Extract just those two columns.
+<p>
+
+<details><summary>Extract all sensors from rows 5 through 8 and columns 4 through 7. This region is being shaded by a nearby structure.
+</summary>
+
+```
+temps( 5:8, 4:7 )
+```
+</details>
+
+<p>
+
+<details><summary>The field has a new irrigation line along rows 5-6. Extract just those two rows.
+</summary>
+
+```
+temps( 5:6, : )
+```
+</details>
 
 
 ### Logical Indexing (Thresholds & Masks)
 
-- Sensors reporting > 35°C might indicate heat stress. Use logical indexing to extract all readings above 35°C.
+<details><summary>Sensors reporting > 35°C might indicate heat stress. Use logical indexing to extract all readings above 35°C.
+</summary>
 
-- Sensors recording < 25°C may be located in low-lying, wetter zones. Create a logical mask of these cooler locations. Visualize the mask with `imagesc`.
+```
+tempFilter = temps > 35
+temps( tempFilter )
+```
+</details>
 
-- Replace any readings between 35°C and 40°C (inclusive) with 35°C to simulate sensor unreliability in a particular temperature region.
+<p>
 
-    Redraw the image map of `temps` after doing this.
+<details><summary>Sensors recording < 25°C may be located in low-lying, wetter zones. 
 
+Create a logical [mask](https://en.wikipedia.org/wiki/Mask_(computing)) of these cooler locations. Visualize the mask with `imagesc`.
+</summary>
+
+```
+coldMask = temps < 25;
+imagesc( coldMask )
+```
+</details>
+
+<p>
+
+<details><summary>Replace any readings between 35°C and 40°C (inclusive) with 35°C to simulate sensor unreliability in a particular temperature region.
+
+Redraw the image map of `temps` after doing this.
+</summary>
+
+```
+% the  &   means  "and" between two comparisons
+temps( temps >= 35 & temps <= 40 ) = 35;
+
+figure;  % opens a second figure window
+imagesc(temps);
+```
+</details>
 
 ### Boundary and Pattern Indexing
 
