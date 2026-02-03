@@ -35,7 +35,16 @@ You should get a figure window pop up with a graphical heat map of the data.
 
 ### Single Element Addressing (Indexing)
 
-- The image map should reflect three hotspots (cells that are brighter in color than all their surrounding). Use single element indexes to extract the values of those three individual cells.
+<details>
+<summary>The image map should reflect three hotspots (cells that are brighter in color than all their surrounding). Use single element indexes to extract the values of those three individual cells.</summary>
+
+```
+temps( 3, 9 )
+temps( 7, 2 )
+temps( 10, 12 )
+```
+
+</details>
 
 
 ### Foundational Row/Column Indexing
@@ -81,7 +90,7 @@ You should get a figure window pop up with a graphical heat map of the data.
 
 ### Linear Indexing
 
-- MATLAB stores matrices column‑major.
+- MATLAB stores matrices [column‑major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
     
     Use linear indexing to extract the 1st, 25th, and 80th elements of temps.
     
