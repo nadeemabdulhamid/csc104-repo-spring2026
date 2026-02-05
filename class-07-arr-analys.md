@@ -35,7 +35,7 @@ This is an extended exercise that performs some extensive analysis on a real wor
 - [USW00093801_proc.csv](./class-07/USW00093801_proc.csv) - Rome, GA daily climate records 1948-2025
 - [class_07.m](./class-07/class_07_starter.m) - Read the instructions at the top and follow them carefully.
 
-You will need your `tempConvert` and `extractDate` function files (from Class 3).
+You will need the [`tempConvert`](./class-07/tempConvert.m) and [`extractDate`](./class-07/extractDate.m) function files.
 
 
 ## Environmental Sensor Grid - `find()`
