@@ -191,8 +191,8 @@ allYears = NaN;
   Change the `plot` command to the following, which plots the average max
   temperatures in red and the average min in blue:
 
-    plot(max_avgs_mon(:,1), max_avgs_mon(:,2), "r", ...
-        min_avgs_mon(:,1), min_avgs_mon(:,2), "b");
+    plot(tmax_avgs_mon(:,1), tmax_avgs_mon(:,2), "r", ...
+        tmin_avgs_mon(:,1), tmin_avgs_mon(:,2), "b");
 
   After the `title` and right before the last `end`, insert the following
   code and see if you can figure out what it's doing:
