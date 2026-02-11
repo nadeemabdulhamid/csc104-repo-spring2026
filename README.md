@@ -9,3 +9,10 @@
 - [Class 4 - Scope](class-04-scope.md)
     - [Function files](class-04/)
 
+### Arrays (Vectors/Matrices)
+
+- [Class 5 - Creating arrays](./class-05-arr-create.md)
+- [Class 6 - Accessing arrays](./class-06-arr-access.md)
+- [Class 7 - Analyzing Matrices](./class-07-arr-analys.md)
+- [Class 8 - Strings](./class-08-strings.md)
+
