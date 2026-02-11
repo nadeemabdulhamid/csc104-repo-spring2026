@@ -160,6 +160,18 @@ x = str2double(c)
 string(n)    % check size -- a scalar
 ```
 
+## Matching and Counting
+
+```
+isstrprop ('abc123', 'alpha')    
+sum(isstrprop ("abc123", "alpha"))
+
+str = 'banana'
+str == 'a'
+sum(str == 'a')
+```
+
+
 
 ## Homework
 
