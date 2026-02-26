@@ -68,12 +68,12 @@ Go over ZyBook section.
 
     &nbsp;
 
-- [Conway's Game of Life](./class-10-gol.md)
-
 - [Exercise 3.9.36](https://learn.zybooks.com/zybook/BERRYCSC104HamidSpring2026/chapter/3/section/9?content_resource_id=89885564)
 
 
 ## Homework
+
+Complete **at least 3** (your choice) of these options:
 
 - [**Exercise 3.9.6**](https://learn.zybooks.com/zybook/BERRYCSC104HamidSpring2026/chapter/3/section/9?content_resource_id=89885536)
 
@@ -81,5 +81,6 @@ Go over ZyBook section.
 
 - [Smoothie Factory](./class-10-smoothie.md)
 
+- [Conway's Game of Life](./class-10-gol.md)
 
 
