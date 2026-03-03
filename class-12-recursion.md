@@ -88,3 +88,56 @@
     Generalize this idea for any `n`.
 
     If `n` is 2 or less, produce an `n`-vector of ones.
+
+2. ### Scored guessing game
+
+    Extend the number-guessing game so the computer counts its own guesses and
+    reports how close it came to the theoretical best.
+
+    #### Part A — `numberGuessC(min, max, count)`
+
+    Rewrite `numberGuess` (as a duplicate function, `numberGuessC`) so it also accepts and threads through a guess counter.
+    When the answer is found it should print the result and **return** `[number, count]`.
+
+    Starter file: [numberGuessC.m](./class-12/numberGuessC.m)
+
+    ```matlab
+    function [ans_num, guesses] = numberGuessC(min, max, count)
+      % YOUR CODE HERE
+    end
+    ```
+
+    Play the game with:
+
+    ```matlab
+    disp("Choose an integer between 1 and 100.");
+    [number, guesses] = numberGuessC(1, 100, 0);  % start with 0 guesses
+    disp(sprintf("Found %d in %d guesses (optimal: %d).\n", number, guesses, optimalGuesses(100)));
+    ```
+
+    #### Part B — `optimalGuesses(n)`
+
+    Write a **recursive** function that returns the minimum number of [binary-search](https://en.wikipedia.org/wiki/Binary_search)
+    guesses needed for a range of size `n`.
+
+    - **Base case:** if `n <= 1`, no guesses are needed.
+    - **Recursive case:** one guess splits the range roughly in half; the harder
+      half has size `ceil(n/2)`.
+
+    Starter file: [optimalGuesses.m](./class-12/optimalGuesses.m)
+
+    ```matlab
+    function g = optimalGuesses(n)
+      % YOUR CODE HERE
+    end
+    ```
+
+    Tests:
+
+    ```matlab
+    assert( optimalGuesses(1)   == 0 );   % only one option — no guessing needed
+    assert( optimalGuesses(2)   == 1 );   % one guess covers 2 possibilities
+    assert( optimalGuesses(4)   == 2 );
+    assert( optimalGuesses(8)   == 3 );
+    assert( optimalGuesses(100) == 7 );
+    ```
