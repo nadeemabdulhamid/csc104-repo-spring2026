@@ -40,6 +40,20 @@
 
     ```
 
+### Question Tree
+
+- Code in class
+
+```
+% A question tree (QT) is either:
+%   - a string "..." representing a thing, or
+%   - a two-element cell array { QUESTION  YES  NO }, where
+%           QUESTION is a string and YES/NO are QTs
+
+kb = { "Does it have a horn?",
+    { "Is it magical?" "a unicorn" "a car" },
+    { "Is it frozen?" "ice cream" "a computer" } };
+```
 
 
 
@@ -52,4 +66,27 @@
 
 Upload your completed files to the appropriate subdirectory in your shared OneDrive folder when done.
 
+
+### Question Tree
+
+- Complete these two functions:
+
+```
+function things = allKnownThings( qt )
+  % produces a column vector of all the things in the given QT
+
+end
+
+function yn = knowsAbout( qt, thing )
+
+end
+
+kb = { "Does it have a horn?",
+        { "Is it magical?" "a unicorn" "a car" },
+        { "Is it frozen?" "ice cream" "a computer" } };
+
+assert( allKnownThings( kb ), [ "a unicorn" ; "a car" ; "ice cream" ; "a computer" ] );
+assert( knowsAbout( kb, "a unicorn" ),  true );
+assert( knowsAbout( kb, "fairies" ),  false );
+```
 
