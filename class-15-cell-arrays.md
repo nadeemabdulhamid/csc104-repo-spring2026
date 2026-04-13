@@ -42,7 +42,7 @@
 
 ### Question Tree
 
-- Code in class
+- [Code in class](class-15/question_tree.m)
 
 ```
 % A question tree (QT) is either:
